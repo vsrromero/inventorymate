@@ -223,7 +223,7 @@
         <header>
 
             <div class="logo">
-                <img src="img/logo.png">
+                <img src="{{ asset('img/logo.png') }}">
             </div>
 
             <nav>
@@ -235,7 +235,7 @@
             <nav>
         </header>
 
-        <div class="page-content">
+        <main class="page-content">
             <div class="page-title">
                 <h1>Inventory Mate, your business mate.</h1>
             </div>
@@ -246,14 +246,14 @@
                 <p>Our team of experts is dedicated to delivering high-quality products and exceptional customer service. We work closely with our clients to understand their unique needs and provide tailored solutions that help them achieve their goals. Whether you're a small business owner or a large enterprise, Inventory Mate has the tools and expertise you need to take your business to the next level.</p>
                 <p>Contact us today to learn more about our products and services, and discover how Inventory Mate can help you manage your data more effectively.</p>
             </div>  
-        </div>
+        </main>
 
         <footer>
             <div class="social-network">
                 <h2>Social network</h2>
-                <img src="img/facebook.png">
-                <img src="img/linkedin.png">
-                <img src="img/youtube.png">
+                <img src="{{ asset('img/facebook.png') }}">
+                <img src="{{ asset('img/linkedin.png') }}">
+                <img src="{{ asset('img/youtube.png') }}">
             </div>
             <div class="area-contact">
                 <h2>Contact</h2>
@@ -263,7 +263,7 @@
             </div>
             <div class="location">
                 <h2>Location</h2>
-                <img src="img/map.png">
+                <img src="{{ asset('img/map.png') }}">
             </div>
         </footer>
     </body>
