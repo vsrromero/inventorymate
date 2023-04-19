@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
-        <title>Super Gestão - contact</title>
+        <title>Inventory Mate - Contact</title>
         <meta charset="utf-8">
 
         <style>

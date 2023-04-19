@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <title>Inventory Mate</title>
         <meta charset="utf-8">
