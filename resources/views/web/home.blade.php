@@ -223,7 +223,7 @@
         <header>
 
             <div class="logo">
-                <img src="img/logo.png">
+                <img src="{{ asset('img/logo.png') }}">
             </div>
 
             <nav>
@@ -235,24 +235,24 @@
             <nav>
         </header>
 
-        <div class="featured-content">
+        <main class="featured-content">
         
             <div class="left">
                 <div class="information">
                     <h1>Inventory Mate</h1>
                     <p>Not only inventory! Not only goods.<p>
                     <div class="call">
-                        <img src="/img/check.png">
+                        <img src="{{ asset('/img/check.png') }}">
                         <span class="white-text">Manage your suppliers, costumers and more.</span>
                     </div>
                     <div class="call">
-                        <img src="img/check.png">
+                        <img src="{{ asset('/img/check.png') }}">
                         <span class="white-text">Your company everywhere</span>
                     </div>
                 </div>
 
                 <div class="video">
-                    <img src="img/player_video.jpg">
+                    <img src="{{ asset('img/player_video.jpg') }}">
                 </div>
             </div>
 
@@ -280,6 +280,6 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </main>
     </body>
 </html>
