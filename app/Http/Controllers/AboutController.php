@@ -9,6 +9,6 @@ class AboutController extends Controller
 {
     public function about()
     {
-        return view('web.about');
+        return view('web.about', ['title' => 'Inventory Mate - About']);
     }
 }

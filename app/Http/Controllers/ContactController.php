@@ -9,6 +9,6 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view('web.contact');
+        return view('web.contact', ['title' => 'Inventory Mate - Contact']);
     }
 }
