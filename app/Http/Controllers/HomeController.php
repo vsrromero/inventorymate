@@ -8,7 +8,13 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('web.home',['title' => 'Inventory Mate']);
+        return view('web.home',
+        //Parameters to be passed to the view
+        [
+            'title' => 'Inventory Mate',
+            'class_board' => 'white-board',
+            'class_text_area' => ''
+        ]);
     }
     
 }

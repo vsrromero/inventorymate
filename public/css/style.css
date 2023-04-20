@@ -44,10 +44,12 @@ button {
     background-color: #7ab829;
     cursor: pointer;
     color: #fff;
+    transition: 0.4s;
 }
 
 button:hover {
     background-color: #6ea22c;
+    transition: 0.4s;
 }
 
 ::placeholder {
