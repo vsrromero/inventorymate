@@ -9,6 +9,12 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view('web.contact', ['title' => 'Inventory Mate - Contact']);
+        return view('web.contact', 
+        //Parameters to be passed to the view
+        [
+            'title' => 'Inventory Mate - Contact',
+            'class_board' => 'black-board',
+            'class_text_area' => 'form-text-area'
+        ]);
     }
 }

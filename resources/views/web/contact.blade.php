@@ -11,24 +11,7 @@
 
         <div class="page-info form-area">
             <div class="main-contact">
-                <form>
-                    <input type="text" placeholder="Name" class="black-board">
-                    <br>
-                    <input type="text" placeholder="Phone" class="black-board">
-                    <br>
-                    <input type="text" placeholder="Email" class="black-board">
-                    <br>
-                    <select class="black-board">
-                        <option value="">Contact Reason</option>
-                        <option value="">Doubts</option>
-                        <option value="">Compliments</option>
-                        <option value="">Complains</option>
-                    </select>
-                    <br>
-                    <textarea class="black-board form-text-area">Your message here</textarea>
-                    <br>
-                    <button type="submit" class="black-board">SEND</button>
-                </form>
+                @include('web.layouts._partials.contact_form')
             </div>
         </div>  
     </main>

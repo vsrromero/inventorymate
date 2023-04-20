@@ -30,24 +30,7 @@
                 <h1>Contact</h1>
                 <p>You have doubts, we have answers.
                 <p>
-                <form>
-                    <input type="text" placeholder="Name" class="white-board">
-                    <br>
-                    <input type="text" placeholder="Phone" class="white-board">
-                    <br>
-                    <input type="text" placeholder="Email" class="white-board">
-                    <br>
-                    <select class="white-board">
-                        <option value="">Contact Reason</option>
-                        <option value="">Doubts</option>
-                        <option value="">Compliments</option>
-                        <option value="">Complains</option>
-                    </select>
-                    <br>
-                    <textarea class="white-board">Your message here</textarea>
-                    <br>
-                    <button type="submit" class="white-board">SEND</button>
-                </form>
+                @include('web.layouts._partials.contact_form')
             </div>
         </div>
     </main>
