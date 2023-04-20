@@ -12,7 +12,9 @@ class ContactController extends Controller
         return view('web.contact', 
         //Parameters to be passed to the view
         [
+            //title of the page
             'title' => 'Inventory Mate - Contact',
+            //classes for common components
             'class_board' => 'black-board',
             'class_text_area' => 'form-text-area'
         ]);

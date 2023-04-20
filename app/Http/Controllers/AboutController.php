@@ -12,6 +12,7 @@ class AboutController extends Controller
         return view('web.about', 
         //Parameters to be passed to the view
         [
+            //title of the page
             'title' => 'Inventory Mate - About'
         ]);
     }

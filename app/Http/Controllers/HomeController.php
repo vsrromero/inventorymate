@@ -11,7 +11,9 @@ class HomeController extends Controller
         return view('web.home',
         //Parameters to be passed to the view
         [
+            //title of the page
             'title' => 'Inventory Mate',
+            //classes for common components
             'class_board' => 'white-board',
             'class_text_area' => ''
         ]);
