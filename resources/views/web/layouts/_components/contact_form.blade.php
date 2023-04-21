@@ -6,7 +6,7 @@
     <br>
     <input name="email" type="text" placeholder="Email" class="{{$class_board}}">
     <br>
-    <select name="contact_reason" class="{{$class_board}}">
+    <select name="subject" class="{{$class_board}}">
         <option value="">Contact Reason</option>
         <option value="doubts">Doubts</option>
         <option value="compliments">Compliments</option>
