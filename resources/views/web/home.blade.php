@@ -28,9 +28,13 @@
         <div class="right">
             <div class="contact">
                 <h1>Contact</h1>
-                <p>You have doubts, we have answers.
-                <p>
-                @include('web.layouts._partials.contact_form')
+                <p>You have doubts, we have answers.</p>
+                @component('web.layouts._components.contact_form', [
+                    'class_board' => $class_board,
+                    'class_text_area' => $class_text_area,
+                ])
+                @endcomponent
+                    
             </div>
         </div>
     </main>

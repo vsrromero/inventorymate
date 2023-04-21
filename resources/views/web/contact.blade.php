@@ -11,7 +11,12 @@
 
         <div class="page-info form-area">
             <div class="main-contact">
-                @include('web.layouts._partials.contact_form')
+                @component('web.layouts._components.contact_form', [
+                    'class_board' => $class_board,
+                    'class_text_area' => $class_text_area,
+                ])
+                @endcomponent
+
             </div>
         </div>  
     </main>
