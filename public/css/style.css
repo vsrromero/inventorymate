@@ -99,14 +99,13 @@ nav a {
     text-decoration: none;
     padding: 14px 16px;
     color: #333;
-    border-radius: 50%;
+    transition: 0.5s;
 }
 
 nav a:hover {
     color: #fff;
     background-color: #268fd0;
     transition: 0.5s;
-    border-radius: 50%;
 }
 
 .featured-content {
