@@ -10,7 +10,7 @@
         <option value="">Contact Reason</option>
         <option value="doubts">Doubts</option>
         <option value="compliments">Compliments</option>
-        <option value="complains">Complains</option>
+        <option value="complaint">Complaint</option>
     </select>
     <br>
     <textarea name="message" class="{{$class_board}}" placeholder="Your message here"></textarea>
