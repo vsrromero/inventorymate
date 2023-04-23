@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this -> call([
             WebContactSeeder::class,
             SupplierSeeder::class,
+            ContactOptionSeeder::class,
         ]);
     }
 }
