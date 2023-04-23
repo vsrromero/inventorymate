@@ -17,7 +17,7 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('web.contact
 Route::get('/login', [LoginController::class, 'login'] )->name('web.login');
 
 // post
-Route::post('/contact', [ContactController::class, 'contact'])->name('web.contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('web.contact');
 
 
 // restricted area (login required)
