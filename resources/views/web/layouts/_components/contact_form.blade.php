@@ -8,9 +8,9 @@
     <br>
     <select name="subject" class="{{$class_board}}">
         <option value="">Contact Reason</option>
-        <option value="doubts" {{ old('subject') == 'doubts' ? 'selected' : '' }} >Doubts</option>
-        <option value="compliments" {{ old('subject') == 'compliments' ? 'selected' : '' }} >Compliments</option>
-        <option value="complaint" {{ old('subject') == 'complaint' ? 'selected' : '' }} >Complaint</option>
+        @foreach($options as $option_value => $option_description)
+            <option value="{{ $option_value }}" {{ old('subject') == $option_value ? 'selected' : '' }} >{{ $option_description }}</option>
+        @endforeach
     </select>
     <br>
     <textarea name="message" class="{{$class_board}}" placeholder="Your message here">{{ old('message') }}</textarea>

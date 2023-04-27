@@ -1,6 +1,6 @@
 @extends('web.layouts.default')
 
-@section('title', $title)
+@section('title', $styles['title'])
 
 @section('body')
 
@@ -30,8 +30,9 @@
                 <h1>Contact</h1>
                 <p>You have doubts, we have answers.</p>
                 @component('web.layouts._components.contact_form', [
-                    'class_board' => $class_board,
-                    'class_text_area' => $class_text_area,
+                    'class_board' => $styles['class_board'],
+                    'class_text_area' => $styles['class_text_area'],
+                    'options' => $options,
                 ])
                 @endcomponent
                     
