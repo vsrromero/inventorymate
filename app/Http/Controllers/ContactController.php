@@ -52,7 +52,8 @@ class ContactController extends Controller
         WebContact::create($request->all());
 
         //redirect to the same page
-        return back()->with('success', 'Thanks for contacting us! - wait till 48 hours for a response');
+
+        return redirect()->route('web.contact')->with('success', 'Thanks for contacting us! - wait till 48 hours for a response');
 
     }
 }
