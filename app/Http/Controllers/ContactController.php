@@ -39,13 +39,15 @@ class ContactController extends Controller
 
     function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|min:3|max:50',
-            'email' => 'required|email|min:5|max:80',
-            'subject' => 'required',
-            'phone' => 'required|max:20',
-            'message' => 'required|min:10|max: 2000'
-        ]);
+        $request->validate(
+            [
+                'name' => 'required|min:3|max:50',
+                'email' => 'required|email|min:5|max:80',
+                'subject' => 'required',
+                'phone' => 'required|max:20|numeric',
+                'message' => 'required|min:10|max: 2000'
+            ],
+    );
 
         //persist data to database
 
