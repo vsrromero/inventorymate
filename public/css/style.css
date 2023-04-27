@@ -209,3 +209,13 @@ footer {
 .social-network img {
     margin: 0px 15px 0px 15px;
 }
+
+.alert.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+  }
+  

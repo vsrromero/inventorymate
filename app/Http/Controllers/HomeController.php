@@ -3,22 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\ContactOptionRepository;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        return view('web.home', $this->styles());
-    }
+    private $styles;
+    private $contactOptionRepository;
 
-    private function styles()
+    public function __construct(ContactOptionRepository $contactOptionRepository)
     {
-        return [
-            //title of the page
+        $this->styles = [
             'title' => 'Inventory Mate',
-            //css classes for common components
             'class_board' => 'white-board',
             'class_text_area' => ''
         ];
+
+        $this->contactOptionRepository = $contactOptionRepository;
+    }
+
+    public function index()
+    {
+        $options = $this->contactOptionRepository->getOptions();
+
+        return view('web.home', [
+            'styles' => $this->styles,
+            'options' => $options
+        ]);
     }
 }
