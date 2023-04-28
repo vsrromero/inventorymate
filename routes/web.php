@@ -21,7 +21,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('web.contact'
 
 
 // restricted area (login required)
-Route::prefix('app')->group(function(){
+Route::prefix('app')->middleware('authentication')->group(function(){
     Route::get('/clients', [ClientController::class, 'index'])->name('app.clients');
     Route::get('/suppliers', [SupplierController::class, 'index'])->name('app.suppliers');
     Route::get('/products', [ProductController::class, 'index'])->name('app.products');
