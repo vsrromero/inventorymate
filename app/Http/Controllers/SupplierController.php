@@ -20,6 +20,8 @@ class SupplierController extends Controller
     
     {   
         $supplierNames = $this->suppliersRepository->getSuppliers();
-        return view('app.supplier.index', compact('supplierNames'));
+        return view('app.supplier.index', [
+            'title' => 'Inventory Mate - Supplier',
+            'supplierNames' => $supplierNames]);
     }
 }

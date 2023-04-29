@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class AuthenticationController extends Controller
 {
     public function login()
     {
@@ -49,11 +49,19 @@ class LoginController extends Controller
             $_SESSION['name'] = $user->name;
             $_SESSION['email'] = $user->email;
 
-            return redirect()->route('app.suppliers');
+            return redirect()->route('app.home');
         } else {
             // User does not exist
             return redirect()->route('web.login')->with('error', 'Invalid email or password');
         }
 
+    }
+
+    public function logout()
+    {
+
+        session_destroy();
+
+        return redirect()->route('web.home');
     }
 }

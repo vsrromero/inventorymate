@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class AppHomeController extends Controller
 {
     public function index()
     {
-        return view('app.client.index');
+        return view('app.home', [
+            'title' => 'Inventory Mate - My Home'
+        ]);
     }
 }
