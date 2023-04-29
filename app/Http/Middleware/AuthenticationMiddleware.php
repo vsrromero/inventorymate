@@ -17,7 +17,13 @@ class AuthenticationMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        //return $next($request);
-        return Response('Unauthorized', 401);
+        session_start();
+
+        if(isset($_SESSION['name']) && $_SESSION['email'] != '') {
+            return $next($request);
+        } else {
+            return redirect()->route('web.login')->with('error', 'You must be logged in to access this page');
+        }
+        
     }
 }

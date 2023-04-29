@@ -17,10 +17,8 @@ class ContactController extends Controller
     public function __construct(ContactOptionRepository $contactOptionRepository)
     {
         $this->styles = [
-            //title of the page
-            'title' => 'Inventory Mate - Contact',
             //css classes for common components
-            'class_board' => 'black-board',
+            'class_border' => 'black-border',
             'class_text_area' => 'form-text-area'
         ];
 
@@ -33,7 +31,8 @@ class ContactController extends Controller
 
         return view('web.contact', [
             'styles' => $this->styles, 
-            'options' => $options
+            'options' => $options,
+            'title' => 'Inventory Mate - Contact'
         ]);
     }
 
