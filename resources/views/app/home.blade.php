@@ -4,9 +4,9 @@
 
 @section('body')
 
-<main class="page-content">
+    <main class="page-content">
         <div class="page-title">
-            <h1>Suppliers</h1>
+            <h1>Wellcome to your home.</h1>
         </div>
     </main>
 

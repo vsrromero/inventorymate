@@ -13,8 +13,8 @@
             <div class="form-login">
                 <form action={{ route('web.login') }} method="post">
                     @csrf
-                    <input name="user" type="text" value="{{ old('user') }}" placeholder="User (Email)" class="black-border">
-                    <input name="password" type="password" placeholder="Password" class="black-border">
+                    <input name="user" type="text" value="{{ old('user') }}" placeholder="User (Email)" class="black-border placeholder-center">
+                    <input name="password" type="password" placeholder="Password" class="black-border placeholder-center">
                     <button type="submit" class="black-border">Sign In</button>
                 </form>
             </div>

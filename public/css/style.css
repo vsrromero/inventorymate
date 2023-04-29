@@ -65,6 +65,10 @@ button:hover {
     color: #333333;
 }
 
+.placeholder-center {
+    text-align: center;
+}
+
 header {
     width: 100%;
     background-color: #f8f8f8;
@@ -156,9 +160,10 @@ nav a:hover {
 }
 
 .page-title {
-    padding: 100px 0px 60px 0px;
+    padding: 60px 0px 1px 0px;
     background-color: #2a9ee2;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-info {
