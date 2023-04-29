@@ -13,8 +13,7 @@ class HomeController extends Controller
     public function __construct(ContactOptionRepository $contactOptionRepository)
     {
         $this->styles = [
-            'title' => 'Inventory Mate',
-            'class_board' => 'white-board',
+            'class_border' => 'white-border',
             'class_text_area' => ''
         ];
 
@@ -27,7 +26,8 @@ class HomeController extends Controller
 
         return view('web.home', [
             'styles' => $this->styles,
-            'options' => $options
+            'options' => $options,
+            'title' => 'Inventory Mate - Home'
         ]);
     }
 }
