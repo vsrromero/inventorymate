@@ -20,12 +20,19 @@ class SupplierFactory extends Factory
     public function definition()
     {
         $faker = \Faker\Factory::create('en_GB');
+        $address_name = $faker->streetName();
+        $address_number = $faker->buildingNumber();
+
         return [
-            'name' => $faker->company(),
-            'address' => $faker->address(),
+            'name' => $faker->company(), 
+            'address' => $address_number . ' ' . $address_name, 
+            'postcode' => $faker->postcode(), 
+            'city' => $faker->city(), 
+            'county' => $faker->county(), 
             'phone' => $faker->phoneNumber(),
-            'email' => $faker->companyEmail(),
-            'contact_name' => $faker->name(),
+            'email' => $faker->companyEmail(), 
+            'site' => $faker->domainName(), 
+            'contact_name' => $faker->name(), 
         ];
     }
 }
