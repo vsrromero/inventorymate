@@ -13,7 +13,7 @@
 
         <div class="page-info">
             <div class="form-search">
-                <form action="" method="post">
+                <form action="{{ route('app.supplier.list')}}" method="get">
                     <input type="text" placeholder="Supplier Name" name="name" class="black-border">
                     <input type="text" placeholder="Supplier Email" name="email" class="black-border">
                     <input type="text" placeholder="Supplier Address" name="address" class="black-border">

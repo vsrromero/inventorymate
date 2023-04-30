@@ -146,14 +146,14 @@ nav a:hover {
 }
 
 .left {
-    float:left;
+    float: left;
     background-color: #268fd0;
     width: 60%;
     height: 100%;
 }
 
 .right {
-    float:right;
+    float: right;
     background-color: #2a9ee2;
     width: 40%;
     height: 100%;
@@ -199,7 +199,7 @@ nav a:hover {
     margin-top: 30px;
 }
 
-.page-info p{
+.page-info p {
     color: #333;
 }
 
@@ -229,9 +229,9 @@ nav a:hover {
     padding: 0 15px;
     margin-top: 50px;
     border: none;
-  }
+}
 
-.form-search{
+.form-search {
     width: 25%;
     margin-left: auto;
     margin-right: auto;
@@ -245,7 +245,7 @@ footer {
 
 .social-network, .area-contact, .location {
     width: 33.333%;
-    border-top:solid 1px #ccc;
+    border-top: solid 1px #ccc;
     float: left;
     text-align: center;
     background-color: #f8f8f8;
@@ -267,9 +267,9 @@ footer {
     padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
-  }
+}
 
-  .alert.alert-denied {
+.alert.alert-denied {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     color: #721c24;
@@ -279,5 +279,55 @@ footer {
     width: 300px;
     margin: 0 auto;
     margin-top: 30px;
-  }
-  
+}
+
+.list {
+    width: 70%;
+}
+
+table {
+    margin: 80px auto;
+    width: 80%;
+    border-collapse: collapse;
+    border: none;
+}
+
+table a {
+    color: #000080;
+    /* cor azul escuro */
+    text-decoration: none;
+    /* sem sublinhado */
+}
+
+table a:hover {
+    text-decoration: none;
+    /* sem sublinhado no hover */
+}
+
+table a:visited {
+    color: #010107;
+    /* manter a cor azul escuro para links visitados */
+}
+
+th {
+    background-color: #2C3E50;
+    color: #FFF;
+}
+
+tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+tr:nth-child(odd) {
+    background-color: #BDBDBD;
+}
+
+td {
+    padding: 10px;
+}
+
+.alert {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
