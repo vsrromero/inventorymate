@@ -6,6 +6,6 @@
         </a>
     </div>
 
-    @include('app.layouts._partials.navmenu')
+    @include('web._layouts._partials.navmenu')
 
 </header>

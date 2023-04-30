@@ -1,4 +1,4 @@
-@extends('web.layouts.default')
+@extends('web._layouts.default')
 
 @section('title', $title)
 
@@ -11,7 +11,7 @@
 
         <div class="page-info form-area">
             <div class="main-contact">
-                @component('web.layouts._components.contact_form', [
+                @component('web._layouts._components.contact_form', [
                     'class_border' => $styles['class_border'],
                     'class_text_area' => $styles['class_text_area'],
                     'options' => $options,
@@ -28,6 +28,6 @@
         </div>
     </main>
 
-    @include('web.layouts._partials.footer')
+    @include('web._layouts._partials.footer')
 
 @endsection
