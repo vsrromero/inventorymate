@@ -3,13 +3,17 @@
 namespace App\Repositories;
 
 use App\Models\Supplier;
+use Illuminate\Http\Request;
 
 class SuppliersRepository
 {
-    public static function getSuppliers()
+    public static function getSuppliers(Request $request)
     {
-        $suppliers = Supplier::all();
-        $suppliers = $suppliers->toArray();
-        return $suppliers;
+        $supplier = Supplier::where('name', 'like', '%'.$request->input('name').'%')
+        ->where('address', 'like', '%'.$request->input('address').'%')
+        ->where('email', 'like', '%'.$request->input('email').'%')
+        ->get();
+        
+        return $supplier;
     }
 }

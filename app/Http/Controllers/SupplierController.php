@@ -11,8 +11,8 @@ class SupplierController extends Controller
 {
 
     public function index()
-    
-    {   
+
+    {
         return view('app.supplier.index', [
             'title' => 'Inventory Mate - Supplier',
         ]);
@@ -20,8 +20,11 @@ class SupplierController extends Controller
 
     public function list()
     {
+        $suppliers = SuppliersRepository::getSuppliers(request());
+
         return view('app.supplier.list', [
             'title' => 'Inventory Mate - Supplier',
+            'suppliers' => $suppliers,
         ]);
     }
 
@@ -34,22 +37,54 @@ class SupplierController extends Controller
 
     public function store(Request $request)
     {
+        //validate the form
         $request->validate([
             'name' => 'required',
             'address' => 'required',
-            'phone' => 'required|numeric',
+            'phone' => 'required',
             'postcode' => 'required|min:3|max:10',
             'city' => 'required',
             'county' => 'required',
         ]);
 
-        if($request->input('_token') != ''){
+        // create new supplier
+        if ($request->input('_token') != '' && $request->input('id') == '') {
 
             $supplier = new Supplier();
             $supplier = $supplier->create($request->all());
-
         }
-        return redirect()->route('app.supplier.new');
+
+        // update existing supplier
+        if ($request->input('_token') != '' && $request->input('id') != '') {
+
+            $supplier = Supplier::find($request->input('id'));
+            $supplier->update($request->all());
+        }
+
+
+        return redirect()->route('app.supplier.new')->with('success', 'Supplier saved.');
     }
 
+    public function delete($id, Request $request)
+    {
+        if ($request->input('_token') != '') {
+
+            $supplier = Supplier::find($id);
+            $supplier->delete();
+            return redirect()->route('app.supplier.list')->with('success', 'Supplier deleted.');
+        }
+    }
+
+    public function update($id, Request $request)
+    {
+
+        $supplier = Supplier::find($id);
+
+        return view(
+            'app.supplier.new',
+            [
+                'supplier' => $supplier,
+            ]
+        );
+    }
 }
