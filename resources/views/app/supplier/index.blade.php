@@ -1,4 +1,4 @@
-@extends('app.layouts.default')
+@extends('app._layouts.default')
 
 @section('title', $title)
 
@@ -9,17 +9,15 @@
             <h1>Suppliers</h1>
         </div>
 
-        <div class="menu ul">
-            <li><a href="">New</a></li>
-            <li><a href="">Search</a></li>
-        </div>
-
+        @include('app._layouts._partials.crudmenu')
 
         <div class="page-info">
             <div class="form-search">
                 <form action="" method="post">
                     <input type="text" placeholder="Supplier Name" name="name" class="black-border">
                     <input type="text" placeholder="Supplier Email" name="email" class="black-border">
+                    <input type="text" placeholder="Supplier Address" name="address" class="black-border">
+                    <button type="submit" class="black-border">Search</button>
                 </form>
             </div>
         </div>

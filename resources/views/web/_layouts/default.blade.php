@@ -10,9 +10,8 @@
     </head>
 
     <body>
-        @include('app.layouts._partials.header')
+        @include('web._layouts._partials.header')
         @yield('body')
     </body>
 
 </html>
-

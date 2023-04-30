@@ -1,4 +1,4 @@
-@extends('web.layouts.default')
+@extends('web._layouts.default')
 
 @section('title', $title)
 
@@ -17,5 +17,5 @@
         </div>  
     </main>
 
-    @include('web.layouts._partials.footer')
+    @include('web._layouts._partials.footer')
 @endsection
