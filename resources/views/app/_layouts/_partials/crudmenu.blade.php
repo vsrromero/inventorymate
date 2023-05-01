@@ -1,6 +1,6 @@
 <div class="menu ul">
     <ul>
-        <li><a href="{{ route('app.supplier.new') }}">New</a></li>
-        <li><a href="{{ route('app.supplier') }}">Search</a></li>
+        <li><a href="{{ $create ?? route('app.supplier.new') }}">New</a></li>
+        <li><a href="{{ $search ?? route('app.supplier') }}">Search</a></li>
     </ul>
 </div>

@@ -9,6 +9,19 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    /**
+     * Display a search form.
+     */
+    public function searchForm()
+    {
+        return view('app.product.search', [
+            'title' => 'Inventory Mate - Products',
+            'create' => route('product.create'),
+            'search' => route('product.search'),
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -20,6 +33,8 @@ class ProductController extends Controller
 
         return view('app.product.index', [
             'title' => 'Inventory Mate - Products',
+            'create' => route('product.create'),
+            'search' => route('product.search'),
             'products' => $products,
             'request' => $request->all(),
         ]);

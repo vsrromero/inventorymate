@@ -42,6 +42,7 @@ Route::prefix('app')->middleware('authentication')->group(function(){
     Route::delete('/supplier/delete/{id}', [SupplierController::class, 'delete'])->name('app.supplier.delete');
     
     //* product routes
+    Route::get('/product/search', [ProductController::class, 'searchForm'])->name('product.search');
     Route::resource('product', ProductController::class);
 
 
