@@ -61,15 +61,16 @@
                                                 class="fa-solid fa-trash-can"></i></button>
                                     </form>
                                 </td>
-
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
-            <form action="{{ route('app.supplier') }}" method="GET">
-                <button type="submit" class="black-border list">New search</button>
-            </form>
+            <div>
+                <span>Page: {{ $suppliers->currentPage() }} of {{ $suppliers->lastPage() }}</span>
+                {{ $suppliers->appends($request)->links('pagination::simple-bootstrap-4') }}
+            </div>
+
         </div>
 
     </main>
