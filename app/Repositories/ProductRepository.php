@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\MeasurementUnit;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -17,5 +18,11 @@ class ProductRepository
         
         
         return $product;
+    }
+
+    public static function getUnits()
+    {
+        $units = MeasurementUnit::all()->toArray();
+        return $units;
     }
 }

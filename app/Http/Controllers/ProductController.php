@@ -47,7 +47,14 @@ class ProductController extends Controller
      */
     public function create()
     {
-        echo 'create';
+        $units = ProductRepository::getUnits();
+
+        return view('app.product.create', [
+            'title' => 'Inventory Mate - Products',
+            'create' => route('product.create'),
+            'search' => route('product.search'),
+            'units' => $units,
+        ]);
     }
 
     /**
