@@ -1,4 +1,4 @@
-<nav>
+<nav class="navmenu">
     <ul>
         <li><a href="{{ route('app.home') }}">My Home</a></li>
         <li><a href="{{ route('app.product') }}">Products</a></li>

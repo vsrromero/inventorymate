@@ -12,7 +12,9 @@ class SuppliersRepository
         $supplier = Supplier::where('name', 'like', '%'.$request->input('name').'%')
         ->where('address', 'like', '%'.$request->input('address').'%')
         ->where('email', 'like', '%'.$request->input('email').'%')
-        ->get();
+        ->orderBy('name')
+        ->paginate(10);
+        
         
         return $supplier;
     }

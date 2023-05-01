@@ -18,13 +18,14 @@ class SupplierController extends Controller
         ]);
     }
 
-    public function list()
+    public function list(Request $request)
     {
         $suppliers = SuppliersRepository::getSuppliers(request());
 
         return view('app.supplier.list', [
             'title' => 'Inventory Mate - Supplier',
             'suppliers' => $suppliers,
+            'request' => $request->all(),
         ]);
     }
 
