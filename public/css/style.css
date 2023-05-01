@@ -310,9 +310,15 @@ table a:visited {
     /* manter a cor azul escuro para links visitados */
 }
 
+
 th {
     background-color: #2C3E50;
     color: #FFF;
+    text-align: center;
+}
+
+.td-left {
+    text-align: left;
 }
 
 tr:nth-child(even) {

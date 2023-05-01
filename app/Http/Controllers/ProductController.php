@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Http\Controllers\Controller;
+use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,9 +14,15 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        echo 'index';
+        $products = ProductRepository::getProducts(request());
+
+        return view('app.product.index', [
+            'title' => 'Inventory Mate - Products',
+            'products' => $products,
+            'request' => $request->all(),
+        ]);
     }
 
     /**
