@@ -6,7 +6,7 @@
 
 <main class="page-content">
         <div class="page-title">
-            <h1>Suppliers</h1>
+            <h1>Suppliers Search</h1>
         </div>
 
         @include('app._layouts._partials.crudmenu')
