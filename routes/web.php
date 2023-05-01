@@ -32,8 +32,8 @@ Route::prefix('app')->middleware('authentication')->group(function(){
     Route::get('/supplier/list', [SupplierController::class, 'list'])->name('app.supplier.list');
     Route::get('/supplier/new', [SupplierController::class, 'new'])->name('app.supplier.new');
     Route::post('/supplier/new', [SupplierController::class, 'store'])->name('app.supplier.new');
-    Route::delete('/supplier/delete/{id}', [SupplierController::class, 'delete'])->name('app.supplier.delete');
     Route::put('/supplier/update/{id}', [SupplierController::class, 'update'])->name('app.supplier.update');
+    Route::delete('/supplier/delete/{id}', [SupplierController::class, 'delete'])->name('app.supplier.delete');
 
     Route::get('/product', [ProductController::class, 'index'])->name('app.product');
     Route::get('/logout', [AuthenticationController::class, 'logout'])->name('app.logout');
