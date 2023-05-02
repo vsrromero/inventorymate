@@ -70,7 +70,7 @@ Visit the application in your web browser at `http://localhost:8000` or at the U
 
 <br>
 
-You can login to the application creating a new user or using the following command on your terminal:
+You can login to the application creating a new user using the following command on your terminal:
 
 `php artisan tinker`
 
