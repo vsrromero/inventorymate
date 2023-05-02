@@ -49,6 +49,7 @@ class ProductController extends Controller
     {
         $units = ProductRepository::getUnits();
 
+
         return view('app.product.create', [
             'title' => 'Inventory Mate - Products',
             'create' => route('product.create'),
@@ -65,7 +66,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        echo 'store';
+        $validate = ProductRepository::validateFields($request);
+        if ($validate->fails()) {
+            return redirect()->route('product.create')->withErrors($validate)->withInput();
+        }
+        Product::create($request->all());
+        return redirect()->route('product.create')->with('success', 'Product created successfully.');
     }
 
     /**
