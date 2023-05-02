@@ -67,3 +67,21 @@ You can now run the project using the following command:
 `php artisan serve`
 
 Visit the application in your web browser at `http://localhost:8000` or at the URL provided by the `php artisan serve` command.
+
+<br>
+
+You can login to the application creating a new user or using the following command on your terminal:
+
+`php artisan tinker`
+
+~~~
+$user = new App\Models\User;
+$user->name = 'Your Name';
+$user->email = 'email@example.com';
+$user->password = bcrypt('your_password');
+$user->save();
+~~~
+
+<br>
+
+Use the email and password you created to login to the application.
