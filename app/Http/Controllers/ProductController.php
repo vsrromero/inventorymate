@@ -66,10 +66,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $validate = ProductRepository::validateFields($request);
-        if ($validate->fails()) {
-            return redirect()->route('product.create')->withErrors($validate)->withInput();
-        }
+        ProductRepository::validateFields($request);
         Product::create($request->all());
         return redirect()->route('product.create')->with('success', 'Product created successfully.');
     }
@@ -98,7 +95,15 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        echo 'edit';
+        $units = ProductRepository::getUnits();
+
+        return view('app.product.edit', [
+            'title' => "Inventory Mate - Products $product->name",
+            'create' => route('product.create'),
+            'search' => route('product.search'),
+            'product' => $product,
+            'units' => $units,
+        ]);
     }
 
     /**

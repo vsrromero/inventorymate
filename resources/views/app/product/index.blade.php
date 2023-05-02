@@ -39,7 +39,9 @@
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 <td>
+                                    <a href="{{ route('product.edit', $product->id) }}">
                                         <i class="fa-solid fa-edit"></i>
+                                    </a>
                                 </td>
                                 <td>
                                     <i class="fa-solid fa-trash-can"></i>

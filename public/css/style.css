@@ -248,6 +248,10 @@ footer {
     bottom: 0;
 }
 
+.space {
+    margin-top: 50px;
+}
+
 .social-network, .area-contact, .location {
     width: 33.333%;
     border-top: solid 1px #ccc;
@@ -295,6 +299,28 @@ footer {
     margin: 0 auto;
     margin-top: 30px;
 }
+
+/* button light blue */
+
+.btn-light-blue {
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .btn-light-blue:hover {
+    background-color: #368bd6;
+    border-color: #368bd6;
+    color: #fff;
+    text-decoration: none;
+  }
+
+/* End button light blue */
 
 /* Table Section */
 
@@ -372,9 +398,12 @@ th:last-child, td:last-child {
     width: 5%; /* Delete column */
 }
 
+/* two columns table */
+
 table.two-columns {
     border: thin solid #060025;
     text-align: left;
+    margin-bottom: 25px;
 }
 
 table.two-columns th:first-child,

@@ -32,11 +32,12 @@
                         <td> {{ $product->measurement_unit_id }} </td>
                     </tr>
                 </table>
-
-                <a href="{{ url()->previous() }}" class="btn btn-default">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    Back
-                </a>
+                <div class="space">
+                    <a href="{{ url()->previous() }}" class="btn btn-light-blue">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                    </a>
+                </div>
             </div>
         </div>
     </main>
