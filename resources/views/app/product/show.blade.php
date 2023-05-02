@@ -33,6 +33,11 @@
                     </tr>
                 </table>
                 <div class="space">
+                    @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                     <a href="{{ url()->previous() }}" class="btn btn-light-blue">
                         <i class="fa-solid fa-chevron-left"></i>
                         Back

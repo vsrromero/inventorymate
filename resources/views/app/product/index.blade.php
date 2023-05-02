@@ -44,7 +44,14 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <i class="fa-solid fa-trash-can"></i>
+                                    <form method="post" action="{{ route('product.destroy',  $product->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn-link-custom">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

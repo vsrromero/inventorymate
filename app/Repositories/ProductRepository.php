@@ -45,4 +45,11 @@ class ProductRepository
         $units = MeasurementUnit::all()->toArray();
         return $units;
     }
+
+    public static function deleteProduct($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+    }
+    
 }

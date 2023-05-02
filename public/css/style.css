@@ -46,14 +46,14 @@ input, select, textarea, button {
 }
 
 button {
-    background-color: #7ab829;
+    background-color: #2C3E50;
     cursor: pointer;
     color: #fff;
     transition: 0.4s;
 }
 
 button:hover {
-    background-color: #6ea22c;
+    background-color: #496d91;
     transition: 0.4s;
 }
 
@@ -242,6 +242,19 @@ header {
     margin-right: auto;
 }
 
+.btn-link-custom {
+    border: none;
+    color: inherit;
+    cursor: default;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    outline: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent !important;
+}
+
 footer {
     width: 100%;
     position: absolute;
@@ -314,8 +327,7 @@ footer {
   }
   
   .btn-light-blue:hover {
-    background-color: #368bd6;
-    border-color: #368bd6;
+    background-color: #496d91;
     color: #fff;
     text-decoration: none;
   }
@@ -334,21 +346,16 @@ table {
 
 table a {
     color: #000080;
-    /* cor azul escuro */
     text-decoration: none;
-    /* sem sublinhado */
 }
 
 table a:hover {
     text-decoration: none;
-    /* sem sublinhado no hover */
 }
 
 table a {
     color: #010107;
-    /* manter a cor azul escuro para links visitados */
 }
-
 
 th {
     background-color: #2C3E50;

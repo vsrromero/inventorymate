@@ -19,7 +19,13 @@
                     <button type="submit" class="black-border">Search</button>
                 </form>
             </div>
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
         </div>
+
+    @endif
 
     </main>
 
