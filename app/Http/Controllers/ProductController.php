@@ -115,7 +115,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        echo 'update';
+        $product->update($request->all());
+        return redirect()->route('product.show', [
+            'product' => $product->id,
+        ])->with('success', 'Product updated successfully.');
     }
 
     /**
@@ -126,6 +129,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        echo 'destroy';
+            
+            ProductRepository::deleteProduct($product->id);
+            return redirect()->route('product.index')->with('success', 'Product deleted successfully.');
+            
     }
 }

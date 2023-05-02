@@ -10,8 +10,9 @@
 
         <div class="page-info">
             <div class="form-search">
-                <form action="{{ route('product.store') }}" method="post">
+                <form action="{{ route('product.update', $product->id) }}" method="post">
                     @csrf
+                    @method('PUT')
                     <input type="text" placeholder="Product Name" value="{{ $product->name ?? old('name') }}" name="name"
                         class="black-border"> {{ $errors->first('name') }}
                     <input type="text" placeholder="Description"
@@ -31,11 +32,7 @@
                     {{ $errors->first('measurement_unit_id') }}
                     <button type="submit" class="black-border">Save</button>
                 </form>
-                @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
+
                 <div class="space">
                     <a href="{{ url()->previous() }}" class="btn btn-light-blue">
                         <i class="fa-solid fa-chevron-left"></i>
