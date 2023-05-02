@@ -82,7 +82,12 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        echo 'show';
+        return view('app.product.show', [
+            'title' => "Inventory Mate - Products $product->name",
+            'create' => route('product.create'),
+            'search' => route('product.search'),
+            'product' => $product,
+        ]);
     }
 
     /**

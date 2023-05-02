@@ -4,6 +4,11 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #060025;
+}
+
 p, span {
     color: #ffffff;
 }
@@ -285,6 +290,14 @@ footer {
     width: 70%;
 }
 
+.alert {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Table Section */
+
 table {
     margin: auto;
     margin-top: 70px;
@@ -305,7 +318,7 @@ table a:hover {
     /* sem sublinhado no hover */
 }
 
-table a:visited {
+table a {
     color: #010107;
     /* manter a cor azul escuro para links visitados */
 }
@@ -333,11 +346,53 @@ td {
     padding: 10px;
 }
 
-.alert {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 30px;
+th:first-child, td:first-child {
+    width: 20%; /* Name column */
 }
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Description column */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 10%; /* Stock column */
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 5%; /* Uni column */
+}
+th:nth-child(5), td:nth-child(5) {
+    width: 5%; /* Details column */
+}
+th:nth-child(6), td:nth-child(6) {
+    width: 5%; /* Edit column */
+}
+
+th:last-child, td:last-child {
+    width: 5%; /* Delete column */
+}
+
+table.two-columns {
+    border: thin solid #060025;
+    text-align: left;
+}
+
+table.two-columns th:first-child,
+table.two-columns td:first-child {
+    width: 10%; /* first column */
+}
+
+table.two-columns th:last-child,
+table.two-columns td:last-child {
+    width: 90%; /* second column */
+}
+
+/* End Table Section */
+
+
+
+
+/* Pagination Section */
 
 ul.pagination {
     display: inline-block;
@@ -395,3 +450,4 @@ ul.pagination li.disabled a:hover {
     border-color: #ddd;
 }
 
+/* End Pagination Section */
