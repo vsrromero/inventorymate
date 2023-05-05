@@ -114,7 +114,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Product $product)
-    {
+    {   
+        ProductRepository::validateFields($request);
         $product->update($request->all());
         return redirect()->route('product.show', [
             'product' => $product->id,
