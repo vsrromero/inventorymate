@@ -6,14 +6,16 @@ use App\Models\MeasurementUnit;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+
+
 class ProductRepository
 {
 
-    public static function validateFields(Request $request)
+    public static function validateFields(Request $request,)
     {
         $request->validate(
             [
-                'name' => 'required|min:5|max:100|unique:products',
+                'name' => 'required|min:5|max:100|',
                 'description' => 'required|max:300',
                 'stock' => 'required|numeric',
                 'measurement_unit_id' => 'required|numeric|exists:measurement_units,id',
