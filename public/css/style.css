@@ -423,6 +423,12 @@ table.two-columns td:last-child {
     width: 90%; /* second column */
 }
 
+/* End two columns table */
+
+.half-width {
+    width: 50%;
+}
+
 /* End Table Section */
 
 

@@ -6,6 +6,8 @@
             <h1>Add Product Detail</h1>
         </div>
 
+        @include('app._layouts._partials.crudmenu')
+
         <div class="page-info">
             <div class="form-search">
 

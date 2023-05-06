@@ -1,5 +1,5 @@
 @if (isset($product_detail->id))
-    <form action="{{ route('product.update', $product_detail->id) }}" method="post">
+    <form action="{{ route('product-detail.update', $product_detail->id) }}" method="post">
         @csrf
         @method('PUT')
 @else

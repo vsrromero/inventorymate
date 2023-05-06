@@ -32,8 +32,7 @@ class ProductDetailRepository
 
     public static function getAllProductDetails(Request $request)
     {
-        $product_detail = ProductDetail::all()
-            ->paginate(10);
+        $product_detail = ProductDetail::all();
 
 
         return $product_detail;
