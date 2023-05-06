@@ -31,6 +31,28 @@
                         <td>Unit:</td>
                         <td> {{ $product->measurement_unit_id }} </td>
                     </tr>
+                    <tr>
+                        <td>Weight:</td>
+                        <td> {{ $product->productDetail ? $product->productDetail->weight . 'Kg' : '' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Height:</td>
+                        <td> {{ $product->productDetail ? $product->productDetail->height . 'cm' : '' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Width:</td>
+                        <td> {{ $product->productDetail ? $product->productDetail->width . 'cm' : '' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Depth:</td>
+                        <td> {{ $product->productDetail ? $product->productDetail->depth . 'cm' : '' }}</td>
+                    </tr>
+                    
+
+
+
+
+
                 </table>
                 <div class="space">
                     @if (session('success'))

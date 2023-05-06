@@ -15,4 +15,14 @@ class Product extends Model
         'stock',
         'measurement_unit_id',
     ];
+
+    public function productDetail()
+    {
+        return $this->hasOne(ProductDetail::class);
+    }
+
+    public function measurementUnit()
+    {
+        return $this->belongsTo(MeasurementUnit::class);
+    }
 }
