@@ -9,6 +9,9 @@
         @include('app._layouts._partials.crudmenu')
 
         <div class="page-info">
+            <br>
+            <p>{{$product_detail->product->name}}</p>
+            <p>{{$product_detail->product->description}}</p><br>
             <div class="form-search">
                 @component('app.product_detail._components.form_edit_create', [
                     'product_detail' => $product_detail,

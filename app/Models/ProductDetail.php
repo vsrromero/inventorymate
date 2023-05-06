@@ -16,4 +16,9 @@ class ProductDetail extends Model
         'depth',
         'measurement_unit_id',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

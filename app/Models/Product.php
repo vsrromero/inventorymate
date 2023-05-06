@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
@@ -19,10 +18,5 @@ class Product extends Model
     public function productDetail()
     {
         return $this->hasOne(ProductDetail::class);
-    }
-
-    public function measurementUnit()
-    {
-        return $this->belongsTo(MeasurementUnit::class);
     }
 }
