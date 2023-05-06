@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    private $create = 'product.create';
+    private $search = 'product.search';
 
     /**
      * Display a search form.
@@ -17,8 +19,8 @@ class ProductController extends Controller
     {
         return view('app.product.search', [
             'title' => 'Inventory Mate - Products',
-            'create' => route('product.create'),
-            'search' => route('product.search'),
+            'create' => route($this->create),
+            'search' => route($this->search),
         ]);
     }
 
@@ -33,8 +35,8 @@ class ProductController extends Controller
 
         return view('app.product.index', [
             'title' => 'Inventory Mate - Products',
-            'create' => route('product.create'),
-            'search' => route('product.search'),
+            'create' => route($this->create),
+            'search' => route($this->search),
             'products' => $products,
             'request' => $request->all(),
         ]);
@@ -52,8 +54,8 @@ class ProductController extends Controller
 
         return view('app.product.create', [
             'title' => 'Inventory Mate - Products',
-            'create' => route('product.create'),
-            'search' => route('product.search'),
+            'create' => route($this->create),
+            'search' => route($this->search),
             'units' => $units,
         ]);
     }
@@ -68,7 +70,7 @@ class ProductController extends Controller
     {
         ProductRepository::validateFields($request);
         Product::create($request->all());
-        return redirect()->route('product.create')->with('success', 'Product created successfully.');
+        return redirect()->route($this->create)->with('success', 'Product created successfully.');
     }
 
     /**
@@ -81,8 +83,8 @@ class ProductController extends Controller
     {
         return view('app.product.show', [
             'title' => "Inventory Mate - Products $product->name",
-            'create' => route('product.create'),
-            'search' => route('product.search'),
+            'create' => route($this->create),
+            'search' => route($this->search),
             'product' => $product,
         ]);
     }
@@ -99,8 +101,8 @@ class ProductController extends Controller
 
         return view('app.product.edit', [
             'title' => "Inventory Mate - Products $product->name",
-            'create' => route('product.create'),
-            'search' => route('product.search'),
+            'create' => route($this->create),
+            'search' => route($this->search),
             'product' => $product,
             'units' => $units,
         ]);
