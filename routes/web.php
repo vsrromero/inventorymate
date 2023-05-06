@@ -8,6 +8,7 @@ use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\AppHomeController;
+use App\Http\Controllers\ProductDetailController;
 use Illuminate\Support\Facades\Route;
 
 //! routes for public area (no login required)
@@ -44,6 +45,7 @@ Route::prefix('app')->middleware('authentication')->group(function(){
     //* product routes
     Route::get('/product/search', [ProductController::class, 'searchForm'])->name('product.search');
     Route::resource('product', ProductController::class);
+    Route::resource(('product-detail'), ProductDetailController::class);
 
 
     Route::get('/logout', [AuthenticationController::class, 'logout'])->name('app.logout');

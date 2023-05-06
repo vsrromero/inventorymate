@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\ProductDetail;
+use App\Repositories\ProductRepository;
+use App\Repositories\ProductDetailRepository;
 use Illuminate\Http\Request;
 
 class ProductDetailController extends Controller
 {
+    private $create = 'product-detail.create';
+    
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class ProductDetailController extends Controller
      */
     public function index()
     {
-        //
+        echo 'index';
     }
 
     /**
@@ -24,7 +29,13 @@ class ProductDetailController extends Controller
      */
     public function create()
     {
-        //
+
+        $units = ProductRepository::getUnits();
+
+        return view('app.product_detail.create', [
+            'title' => 'Inventory Mate - Create Product Detail',
+            'units' => $units,
+        ]);
     }
 
     /**
@@ -35,7 +46,10 @@ class ProductDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ProductDetailRepository::validateFields($request);
+
+        ProductDetail::create($request->all());
+        return redirect()->route($this->create)->with('success', 'Product detail created successfully.');
     }
 
     /**
@@ -46,7 +60,7 @@ class ProductDetailController extends Controller
      */
     public function show($id)
     {
-        //
+        echo 'show';
     }
 
     /**
@@ -57,7 +71,7 @@ class ProductDetailController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo 'edit';
     }
 
     /**
@@ -69,7 +83,7 @@ class ProductDetailController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo 'update';
     }
 
     /**
@@ -80,6 +94,6 @@ class ProductDetailController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo 'destroy';
     }
 }
