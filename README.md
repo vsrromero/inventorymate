@@ -1,13 +1,12 @@
 # Inventory Mate
-Not only inventory management, but also a showcase of skills.
+Not a inventory management, but a showcase of skills.
 
 ## Project description
 This project is designed to showcase a portfolio of skills. While there is always room for improvement, this project serves as a demonstration of various features, with some excluded but presented elsewhere in the project. Examples include error messages styled with CSS, and more comprehensive validations.
 
 I am not using this project to demonstrate my design skills, but rather my ability to create a functional application.
 
-At this time, I am not using API routes, but I am using Laravel's resource routes.  
-*Keep an eye out for future project that will demonstrate these skills.*
+At this time, I am not using API routes, but I am using the old style routes with Laravel's resource routes.  
 
 I am also not using Vue.js or React.js, but I am using Blade templates, you can finde these skills in my other projects. 
   
@@ -15,6 +14,8 @@ This project demonstrates the use of several skills from the Laravel Framework a
 It also covers an understanding of the Laravel architecture and the MVC pattern.
 
 *I am constantly working on improving this project by adding new features and updates. Please check back regularly for the latest updates.*
+
+**Again, keep in mind that this project is not a finished product, and it was built as a showcase of skills, where I tried to use several functionalities of the Laravel framework, for this reason I didn't followed paterns when building routes or coding some parts of the project, I'd like to show that I know how to work with the framwork**
   
 ## Project installation
 
